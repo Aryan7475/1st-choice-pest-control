@@ -1,5 +1,5 @@
 import React from 'react';
-import { Phone, MapPin, Mail, Send, CheckCircle2, Clock } from 'lucide-react';
+import { Phone, Mail, Send, CheckCircle2, Clock } from 'lucide-react';
 import { PHONE_MAIN, PEST_LIST } from '../constants';
 import EcoBanner from '../components/EcoBanner';
 
@@ -134,7 +134,7 @@ const Contact: React.FC = () => {
                                 <label className="text-sm font-bold text-slate-700 ml-1">What pests are you seeing?</label>
                                 <div className="bg-slate-50 border border-slate-200 rounded-2xl p-6">
                                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-                                        {PEST_LIST.map(pest => (
+                                        {PEST_LIST.map((pest: any) => (
                                             <label key={pest} className="flex items-center gap-3 p-2 rounded-xl hover:bg-white hover:shadow-sm cursor-pointer transition-all border border-transparent hover:border-slate-100">
                                                 <div className="relative flex items-center">
                                                     <input type="checkbox" className="peer w-5 h-5 border-2 border-slate-300 rounded-md checked:bg-green-600 checked:border-green-600 transition-colors appearance-none" />

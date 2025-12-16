@@ -127,7 +127,7 @@ const Home: React.FC = () => {
                 </h2>
                 
                 <div className="flex flex-wrap justify-center gap-3 max-w-5xl mx-auto">
-                    {PEST_LIST.map(pest => (
+                    {PEST_LIST.map((pest: any) => (
                         <Link 
                             key={pest} 
                             to={`/pest/${pest.toLowerCase().replace(/[\s&/]+/g, '-')}`}

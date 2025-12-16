@@ -65,7 +65,7 @@ const Footer: React.FC = () => {
                 <span className="w-8 h-1 bg-green-500 rounded-full"></span> Common Pests
             </h3>
             <div className="grid grid-cols-2 gap-x-4 gap-y-2">
-                {[...col1, ...col2].map((pest, idx) => (
+                {[...col1, ...col2].map((pest: any, idx: any) => (
                      <Link 
                         key={idx} 
                         to={`/pest/${pest.toLowerCase().replace(/[\s&/]+/g, '-')}`} 
@@ -84,7 +84,7 @@ const Footer: React.FC = () => {
             </h3>
             <div className="bg-slate-800/50 p-4 rounded-xl border border-slate-700/50">
                 <ul className="space-y-3 text-xs text-slate-400 max-h-48 overflow-y-auto pr-2 [&::-webkit-scrollbar]:w-2 [&::-webkit-scrollbar-track]:bg-slate-800 [&::-webkit-scrollbar-thumb]:bg-green-600 [&::-webkit-scrollbar-thumb]:rounded-full hover:[&::-webkit-scrollbar-thumb]:bg-green-500">
-                {LOCATIONS.map((loc, idx) => (
+                {LOCATIONS.map((loc: any, idx: any) => (
                     <li key={idx} className="flex gap-2">
                         <MapPin size={14} className="text-green-600 flex-shrink-0 mt-0.5" />
                         <div>

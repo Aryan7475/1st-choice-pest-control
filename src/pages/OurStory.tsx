@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Award, Star, Quote, ArrowRight, MapPin } from 'lucide-react';
+import { Award, Quote, ArrowRight, MapPin } from 'lucide-react';
 import EcoBanner from '../components/EcoBanner';
 import { LOCATIONS, PHONE_MAIN } from '../constants';
 
@@ -105,7 +105,7 @@ const OurStory: React.FC = () => {
         <div className="bg-white rounded-3xl shadow-xl p-10 mt-16 text-center border border-slate-100">
             <h3 className="text-2xl font-bold mb-8 text-slate-800">Click on a location below & scroll down to read our reviews!</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-                {LOCATIONS.filter(l => l.street !== "Coming Soon").map((loc, idx) => (
+                {LOCATIONS.filter((l: any) => l.street !== "Coming Soon").map((loc: any, idx: any) => (
                     <a key={idx} href="#" className="flex items-center justify-center gap-2 p-4 rounded-xl border border-slate-200 hover:border-green-500 hover:bg-green-50 transition-all font-bold text-slate-700 hover:text-green-700">
                         <MapPin size={18} /> {loc.city} Branch
                     </a>

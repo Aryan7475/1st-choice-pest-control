@@ -44,7 +44,7 @@ const PestDetail: React.FC = () => {
                 <h2 className="text-3xl font-bold font-heading text-slate-800 mb-6">Protect Your Home from {data.name.replace(' Control', '')}</h2>
                 <div className="prose prose-lg text-slate-600 mb-8">
                     {data.introContent ? (
-                        data.introContent.map((paragraph, i) => <p key={i} className="mb-4">{paragraph}</p>)
+                        data.introContent.map((paragraph: string, i: number) => <p key={i} className="mb-4">{paragraph}</p>)
                     ) : (
                         <p>{data.description}</p>
                     )}
@@ -77,7 +77,7 @@ const PestDetail: React.FC = () => {
                     <div>
                          <h4 className="font-bold text-slate-900 mb-3 uppercase text-xs tracking-wider">Habits</h4>
                          <ul className="space-y-2">
-                            {data.behavior.map((b, i) => (
+                            {data.behavior.map((b: string, i: number) => (
                                 <li key={i} className="text-slate-600 flex items-start gap-3">
                                     <div className="w-1.5 h-1.5 rounded-full bg-blue-500 mt-2 flex-shrink-0"></div>
                                     <span className="leading-relaxed">{b}</span>
@@ -95,7 +95,7 @@ const PestDetail: React.FC = () => {
                         <Bug className="text-green-600" /> Common Types
                     </h3>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                        {data.types.map((type, idx) => (
+                        {data.types.map((type: any, idx: number) => (
                             <div key={idx} className="bg-slate-50 p-6 rounded-xl border border-slate-100 hover:border-green-200 transition-colors">
                                 <h4 className="font-bold text-lg text-slate-800 mb-2">{type.name}</h4>
                                 <p className="text-sm text-slate-600 leading-relaxed">{type.description}</p>
@@ -111,7 +111,7 @@ const PestDetail: React.FC = () => {
                     <ClipboardList className="text-green-600" /> Our Treatment Process
                 </h3>
                 <div className="space-y-6">
-                    {data.treatmentSteps.map((step, index) => (
+                    {data.treatmentSteps.map((step: any, index: number) => (
                         <div key={index} className="flex gap-6 group">
                             <div className="flex-shrink-0 w-12 h-12 bg-slate-900 text-white rounded-2xl flex items-center justify-center font-black text-xl shadow-lg group-hover:scale-110 group-hover:bg-green-600 transition-all duration-300">
                                 {index + 1}
@@ -132,7 +132,7 @@ const PestDetail: React.FC = () => {
                         <ShieldCheck className="text-green-600" /> Prevention Tips
                     </h3>
                     <ul className="grid gap-4">
-                        {data.preventionTips.map((tip, idx) => (
+                        {data.preventionTips.map((tip: string, idx: number) => (
                             <li key={idx} className="flex items-start gap-3 bg-white/50 p-3 rounded-lg">
                                 <CheckCircle className="text-green-600 flex-shrink-0 mt-0.5" size={18} />
                                 <span className="text-green-900 text-sm font-medium leading-relaxed">{tip}</span>

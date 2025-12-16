@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Building2, Factory, Utensils, Stethoscope, Store, Warehouse } from 'lucide-react';
+import { Building2, Utensils, Stethoscope, Store, Warehouse } from 'lucide-react';
 import { PHONE_QUOTE } from '../constants';
 
 const Commercial: React.FC = () => {

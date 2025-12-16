@@ -30,7 +30,7 @@ const Locations: React.FC = () => {
                              <Bug className="text-green-600" size={24} /> Our Services
                         </h3>
                         <ul className="space-y-2">
-                            {PEST_LIST.sort().map((pest, idx) => (
+                            {PEST_LIST.sort().map((pest: any, idx: any) => (
                                 <li key={idx}>
                                     <Link 
                                         to={`/pest/${pest.toLowerCase().replace(/[\s&/]+/g, '-')}`}
@@ -48,7 +48,7 @@ const Locations: React.FC = () => {
             {/* Main Content - Spans 9 columns */}
             <div className="lg:col-span-9">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    {EXTENDED_LOCATIONS.map((loc, idx) => (
+                    {EXTENDED_LOCATIONS.map((loc: any, idx: any) => (
                         <div key={idx} className="bg-white rounded-2xl shadow-lg border border-slate-100 overflow-hidden hover:shadow-xl transition-shadow flex flex-col">
                             <div className="p-8 flex-grow">
                                 <h2 className="text-2xl font-bold font-heading text-slate-800 mb-6">{loc.city}, {loc.state} Branch</h2>

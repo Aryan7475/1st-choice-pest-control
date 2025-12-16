@@ -95,7 +95,7 @@ const Header: React.FC = () => {
                 <nav className="hidden xl:flex items-center gap-1 bg-slate-50 p-1 rounded-full border border-slate-100 mx-4">
                     <NavItem id="pest" title="Pest Control">
                         <div className="w-[600px] grid grid-cols-3 gap-2">
-                            {PEST_LIST.map(pest => (
+                            {PEST_LIST.map((pest: any) => (
                                 <Link 
                                     key={pest} 
                                     to={`/pest/${pest.toLowerCase().replace(/[\s&/]+/g, '-')}`}
@@ -110,7 +110,7 @@ const Header: React.FC = () => {
 
                     <NavItem id="prevention" title="Prevention">
                         <div className="w-[300px] flex flex-col gap-1">
-                            {PREVENTION_LIST.map((item, idx) => (
+                            {PREVENTION_LIST.map((item: any, idx: any) => (
                                 <Link 
                                     key={idx} 
                                     to={`/pest/${item.id}`} 

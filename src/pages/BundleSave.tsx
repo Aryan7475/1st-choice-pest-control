@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, Check, ShieldCheck, Tag } from 'lucide-react';
 import { BUNDLES, PHONE_QUOTE } from '../constants';
 import EcoBanner from '../components/EcoBanner';
-import { Link } from 'react-router-dom';
 
 const BundleSave: React.FC = () => {
   const [openDetails, setOpenDetails] = useState<number | null>(null);
@@ -32,7 +31,7 @@ const BundleSave: React.FC = () => {
       <div className="container mx-auto px-4 py-16 -mt-10 relative z-20">
         
         <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-20">
-            {BUNDLES.map((bundle, index) => (
+            {BUNDLES.map((bundle: any, index: any) => (
                 <div key={index} className="bg-white rounded-3xl shadow-xl shadow-slate-200/40 overflow-hidden border border-slate-100 flex flex-col hover:border-green-300 transition-all duration-300 group">
                     {/* Card Header */}
                     <div className="p-8 bg-white border-b border-slate-50 relative overflow-hidden">
@@ -43,7 +42,7 @@ const BundleSave: React.FC = () => {
                         <h3 className="text-2xl font-black font-heading text-slate-800 mb-6 pr-24">{bundle.title}</h3>
                         
                         <div className="flex flex-wrap gap-3">
-                            {bundle.services.map((s, i) => (
+                            {bundle.services.map((s: any, i: any) => (
                                 <div key={i} className="flex items-center gap-2 bg-slate-50 border border-slate-100 px-4 py-3 rounded-xl">
                                     <div className="w-8 h-8 rounded-full bg-white shadow-sm flex items-center justify-center text-green-600">
                                         <s.icon size={16} />
@@ -58,7 +57,7 @@ const BundleSave: React.FC = () => {
                     <div className="p-8 flex-grow bg-slate-50/30">
                          {/* High Level Summary */}
                         <div className="space-y-4 mb-8">
-                             {bundle.details.map((d, i) => (
+                             {bundle.details.map((d: any, i: any) => (
                                 <div key={i} className="flex items-start gap-3">
                                     <CheckCircleIcon className="w-5 h-5 text-green-500 mt-1 flex-shrink-0" />
                                     <div>
@@ -72,7 +71,7 @@ const BundleSave: React.FC = () => {
                         <div className={`overflow-hidden transition-all duration-500 ease-in-out ${openDetails === index ? 'max-h-[800px] opacity-100' : 'max-h-0 opacity-0'}`}>
                             <div className="bg-white rounded-2xl p-6 border border-slate-100 shadow-inner mb-6 space-y-6">
                                 <h4 className="font-bold text-slate-900 uppercase tracking-wider text-xs border-b border-slate-100 pb-2">Plan Details</h4>
-                                {bundle.details.map((detail, idx) => (
+                                {bundle.details.map((detail: any, idx: any) => (
                                     <div key={idx} className="relative pl-4 border-l-2 border-green-200">
                                         <p className="font-bold text-slate-800 text-sm mb-1">{detail.service}</p>
                                         <p className="text-slate-500 text-sm leading-relaxed whitespace-pre-line">
